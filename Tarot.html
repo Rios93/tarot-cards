@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {margin: 0;}
+  #card {width: 100%; height: 100vh; background-size: contain; background-repeat: no-repeat; background-position: center;}
+</style>
+<script>
+  const cards = [
+    'https://i.imgur.com/WWsfv8k.png',
+    'https://i.imgur.com/ldOf9X6.png',
+    // Add more card URLs here
+  ];
+
+  function drawCard() {
+    const cardIndex = Math.floor(Math.random() * cards.length);
+    document.getElementById('card').style.backgroundImage = `url(${cards[cardIndex]})`;
+  }
+</script>
+</head>
+<body onload="drawCard()">
+  <div id="card"></div>
+</body>
+</html>
